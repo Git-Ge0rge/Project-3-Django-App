@@ -1,60 +1,69 @@
- body{
-  background-color: white;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
- nav{
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #2e2e2e;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+body {
+  background-color: white;
+}
+nav {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #2e2e2e;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
 
-} 
-.card{
+/* Portfolio Cards */
+.card {
   display: flex;
   justify-content: flex-start;
-  width: 260px;
+  width: 100%;
   border-radius: 10px;
 }
-.card-title{
+.card-title {
   display: flex;
   justify-content: center;
 }
-.card-ticker{
+.card-ticker {
   display: flex;
-  
 }
-.card-item{
+.card-item {
   display: flex;
-  justify-content: center;
-}
-
-
-.portfolio-page-title{
-  display: flex;
-
+  justify-content: flex-start;
 }
 
-.card-action{
+.portfolio-page-title {
+  display: flex;
+}
+.stock-header {
+  display: flex;
+}
+.crypto-header {
+  display: flex;
+}
+
+/* Details Card */
+
+.card-action {
   display: flex;
   align-items: flex-end;
 }
-.stock-header{
-  display: flex;
-  
 
+.card-details {
+  display: flex;
+  width: 100%;
+  border: 5px blue solid;
+  height: 300px;
+  font-size: 20px;
 }
-.crypto-header{
-  display: flex;
-  
 
-} 
-
-footer{
-  position: relative;
+/* Footer */
+.legal-right {
+  position: absolute;
   bottom: 0;
   left: 88%;
-  height: 2.5rem;    
+  height: 2.5rem;
 }
