@@ -30,6 +30,7 @@ class Stock(models.Model):
         r = requests.get(url)
         data = r.json()
         quote = data.get('Global Quote')
+
         if quote is None:
            return 0.00
         
@@ -51,9 +52,9 @@ class Stock(models.Model):
 class Crypto(models.Model):
     name = models.CharField(max_length=100)
     ticker = models.CharField(max_length=10)
-    purchase_price = models.DecimalField(max_digits=10, decimal_places=2)
+    purchase_price = models.DecimalField('Purchase Price', max_digits=10, decimal_places=2)
     purchase_date = models.DateField('Purchase Date')
-    num_of_units = models.DecimalField(max_digits=14, decimal_places=10)
+    num_of_units = models.DecimalField('# of Units', max_digits=14, decimal_places=10)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
 
     @property # allows book value to be called similar to other model variables
@@ -74,7 +75,9 @@ class Crypto(models.Model):
 
         value_of_price = quote.get('5. Exchange Rate')
         float_data_value = float(value_of_price)
+        print(type(float_data_value))
         mv_unrounded = float_data_value * self.num_of_units
+        print(type(self.num_of_units))
         return '{:.2f}'.format(mv_unrounded)
 
     @property 
