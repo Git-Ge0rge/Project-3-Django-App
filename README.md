@@ -1,5 +1,5 @@
-# G & A Financial Portfolio Planner 📈
-## Project-3-Django-App
+# [G & A Financial Portfolio Planner 📈](https://stockportfoliodjangoproject3.herokuapp.com/)
+## [Project-3-Django-App](https://stockportfoliodjangoproject3.herokuapp.com/)
     By Ahmed & George
 ### About the project:
 <p> The project we created is a "Stock and Crypto Planner" where the user is able to track their finances all in one place. Everything will be saved within PostgreSql on the backend database and theres an API that we used to make calls to get live tickers for both Stocks and Crypto. We also added a login feature for users to be able to save their account details as well as their portfolio details. To view the application that has been deployed through Heroku, please click --> <a href="http://localhost:8000/"> G & A Financial Portfolio Planner</a></p>
